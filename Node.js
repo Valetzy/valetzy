@@ -1,19 +1,25 @@
+// Simulating input (replace with actual input handling in your application)
+const userInput = "123456789";
 
+// Function to check user input and display flag
+function checkInput(input) {
+    const correctInput = "123456789";
+    
+    if (input === correctInput) {
+        retrieveFlagFromServer();
+    } else {
+        console.log("Incorrect input");
+    }
+}
 
-const express = require('express');
-const app = express();
+// Function to simulate fetching flag from server
+function retrieveFlagFromServer() {
+    // Simulating a request to a server endpoint (replace with actual server communication)
+    setTimeout(() => {
+        const flag = "selectCTF{myflag_i}";
+        console.log("Flag: " + flag);
+    }, 1000); // Simulating a delay for fetching data
+}
 
-// Define a route to retrieve the flag
-app.get('/api/getFlag', (req, res) => {
-    // Logic to generate or retrieve the flag securely
-    const flag = "selectCTF{myflag_i}";
-
-    // Return the flag as JSON response
-    res.json({ flag });
-});
-
-// Start the server
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
+// Example usage: simulate input handling
+checkInput(userInput);
